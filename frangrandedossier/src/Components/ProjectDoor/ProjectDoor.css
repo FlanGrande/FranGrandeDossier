@@ -1,0 +1,204 @@
+/*
+orange: #ffa10f;
+metal-orange: #dd810d;
+*/
+
+.project-door-box
+{
+	position: relative;
+	overflow: hidden;
+	margin: 0 8px;
+	width: 268px;
+}
+
+.frame
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+.game_logo
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+}
+
+.door_top
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+	transition: all 1.6s linear;
+}
+
+.door_bottom
+{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+	transition: all 1.6s linear;
+}
+
+.project-door-box.open .door_top
+{
+	top: -280px;
+	transition: all 0.6s linear;
+}
+
+.project-door-box.open .door_bottom
+{
+	top: 280px;
+	transition: all 0.6s linear;
+}
+
+.project-door-box div .cog
+{
+	position: absolute;
+	z-index: 1;
+	transform: rotate(0);
+	transition: all 1.6s linear;
+}
+
+.project-door-box.open div .cog
+{
+	transform: rotate(180deg);
+	transition: all 0.6s linear;
+}
+
+.project-door-box.open div .cog.c1,
+.project-door-box.open div .cog.c3,
+.project-door-box.open div .cog.c5,
+.project-door-box.open div .cog.c7
+{
+	transform: rotate(-180deg);
+	transition: all 0.6s linear;
+}
+
+.cogs-left
+{
+	position: relative;
+	top: 0px;
+	left: -10px;
+}
+
+.cogs-right
+{
+	position: relative;
+	top: -140px;
+	right: -22px;
+}
+
+.cog.c1
+{
+	position: absolute;
+	top: 146px;
+	left: 0px;
+}
+
+.cog.c2
+{
+	position: absolute;
+	top: 200px;
+	left: -12px;
+}
+
+.cog.c3
+{
+	position: absolute;
+	top: 266px;
+	left: -12px;
+}
+
+.cog.c4
+{
+	position: absolute;
+	top: 320px;
+	left: 0px;
+}
+
+.cog.c5
+{
+	position: absolute;
+	top: 386px;
+	left: -12px;
+}
+
+.cog.c6
+{
+	position: absolute;
+	top: 440px;
+	left: 0px;
+}
+
+.cog.c7
+{
+	position: absolute;
+	top: 512px;
+	left: 0px;
+}
+
+.cog.c8
+{
+	position: absolute;
+	top: 572px;
+	left: -12px;
+}
+
+.cogs-right .cog.c1
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c2
+{
+	left: initial;
+	right: 12px;
+}
+
+.cogs-right .cog.c3
+{
+	left: initial;
+	right: 12px;
+}
+
+.cogs-right .cog.c4
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c5
+{
+	left: initial;
+	right: 12px;
+}
+
+.cogs-right .cog.c6
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c7
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c8
+{
+	left: initial;
+	right: 12px;
+}
