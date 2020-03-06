@@ -1,5 +1,12 @@
+html
+{
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+  background-color: #000000;
 }
 
 .App-logo {
@@ -14,13 +21,35 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: #000000;
+  height: 24vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-body {
+  position: absolute;
+  top: 24vh;
+}
+
+.App-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #000000;
+  height: 12vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(2px + 2vmin);
   color: white;
 }
 
