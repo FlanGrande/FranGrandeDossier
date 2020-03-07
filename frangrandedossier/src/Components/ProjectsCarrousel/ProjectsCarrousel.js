@@ -9,12 +9,16 @@ class ProjectsCarrousel extends React.Component {
 		this.pcRef = React.createRef();
 		this.currentPos = 0;
 		this.minLeft = 0;
-		this.maxLeft = -2620; /* Maybe this can be calculated */
+		this.maxLeft = -window.screen.width*2; //2 should "become number_of_projects"
+
+		this.state = {
+			number_of_projects: 0
+		};
 	}
 
-	handleLeftAreaMouseEnter() {
+	handleLeftAreaClick() {
 		const wrapper = this.pcRef.current;
-		this.currentPos += 1000;
+		this.currentPos += window.screen.width;
 
 		if(this.currentPos > this.minLeft)
 		{
@@ -24,12 +28,10 @@ class ProjectsCarrousel extends React.Component {
 		wrapper.style.left = this.currentPos+"px";
 	}
 
-	handleLeftAreaMouseLeave() {
-	}
-
-	handleRightAreaMouseEnter() {
+	handleRightAreaClick() {
 		const wrapper = this.pcRef.current;
-		this.currentPos -= 1000;
+		this.currentPos -= window.screen.width;
+		console.log(this.pcRef);
 
 		if(this.currentPos < this.maxLeft)
 		{
@@ -39,10 +41,8 @@ class ProjectsCarrousel extends React.Component {
 		wrapper.style.left = this.currentPos+"px";
 	}
 
-	handleRightAreaMouseLeave() {
-	}
-
 	render() {
+		this.number_of_projects = React.Children.count(this.props.children);
 		const link_1minute = "https://frangrande.itch.io/1minute";
 		
 		const logo_asteroidsron = "https://img.itch.zone/aW1hZ2UvODYwNzMvNDA1OTAwLmdpZg==/original/AmJ2nU.gif";
@@ -51,41 +51,23 @@ class ProjectsCarrousel extends React.Component {
 		return (
 			<div>
 				<div ref={this.pcRef} name="projects-carrousel" className="projects-carrousel">
-					<ProjectDoor 
-						name="1Minute"
-						image_url={logo_1minute}
-						game_link={link_1minute} />
-					<ProjectDoor
-						name="Asteroirds & Ron"
-						image_url={logo_asteroidsron}
-						game_link={link_asteroidsron} />
-					<ProjectDoor
-						name="TetrisClon" />
-					<ProjectDoor
-						name="BumperBallClon" />
-					<ProjectDoor
-						name="Cthulhumpage" />
-					<ProjectDoor
-						name="CurillaVSEvil" />
-					<ProjectDoor
-						name="TopItUp" />
-					<ProjectDoor
-						name="JuegosParaMaribel" />
-					<ProjectDoor
-						name="King Skeleton" />
-					<ProjectDoor
-						name="PangClon" />
-					<ProjectDoor
-						name="PongClon" />
-					<ProjectDoor
-						name="ShaderLibrary" />
-					<ProjectDoor
-						name="SnakeClon" />
-					<ProjectDoor
-						name="TetrisFight" />
+					<ProjectDoor name="1Minute" image_url={logo_1minute} game_link={link_1minute} />
+					<ProjectDoor name="Asteroids & Ron" image_url={logo_asteroidsron} game_link={link_asteroidsron} />
+					<ProjectDoor name="TetrisClon" />
+					<ProjectDoor name="BumperBallClon" />
+					<ProjectDoor name="Cthulhumpage" />
+					<ProjectDoor name="CurillaVSEvil" />
+					<ProjectDoor name="TopItUp" />
+					<ProjectDoor name="JuegosParaMaribel" />
+					<ProjectDoor name="King Skeleton" />
+					<ProjectDoor name="PangClon" />
+					<ProjectDoor name="PongClon" />
+					<ProjectDoor name="ShaderLibrary" />
+					<ProjectDoor name="SnakeClon" />
+					<ProjectDoor name="TetrisFight" />
 				</div>
-				<div id="carrousel-left-area" onMouseEnter={() => this.handleLeftAreaMouseEnter()} onMouseLeave={() => this.handleLeftAreaMouseLeave()}></div>
-				<div id="carrousel-right-area" onMouseEnter={() => this.handleRightAreaMouseEnter()} onMouseLeave={() => this.handleRightAreaMouseLeave()}></div>
+				<div id="carrousel-left-area" onClick={() => this.handleLeftAreaClick()}>{"←"}</div>
+				<div id="carrousel-right-area" onClick={() => this.handleRightAreaClick()}>{"→"}</div>
 			</div>
 		)
 	}

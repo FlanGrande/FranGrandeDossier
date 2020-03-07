@@ -7,8 +7,17 @@ metal-orange: #dd810d;
 {
 	position: relative;
 	overflow: hidden;
-	margin: 0 8px;
-	width: 268px;
+	/*margin: 0 8px;*/
+	width: 20vw;
+}
+
+.project-door-box .wrapper
+{
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	width: 276px;
+	margin: 0 auto;
 }
 
 .frame
@@ -26,6 +35,9 @@ metal-orange: #dd810d;
 	left: 0;
 	z-index: 0;
 	height: 100%;
+	width: 276px;
+	object-fit: cover;
+	object-position: 0 0;
 }
 
 .door_reflection
@@ -97,15 +109,15 @@ metal-orange: #dd810d;
 .cogs-left
 {
 	position: relative;
-	top: 0px;
-	left: -10px;
+	top: -16px;
+	left: -4px;
 }
 
 .cogs-right
 {
 	position: relative;
 	top: -140px;
-	right: -22px;
+	left: 16px;
 }
 
 .cog.c1
