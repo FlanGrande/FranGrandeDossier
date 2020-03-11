@@ -1,73 +1,117 @@
 import React from 'react';
 import ProjectDoor from '../ProjectDoor/ProjectDoor.js';
-import logo_1minute from '../../Assets/1Minute.png';
+import projects from '../../Assets/list_of_projects.json';
 import "./ProjectsCarrousel.css";
 
 class ProjectsCarrousel extends React.Component {
 	constructor(props) {
 		super(props);
-		this.pcRef = React.createRef();
-		this.currentPos = 0;
-		this.minLeft = 0;
-		this.maxLeft = -window.screen.width*2; //2 should "become number_of_projects"
+		this.projectsCarrouselRef = React.createRef();
+		this.pos = 0;
+
+		var selector_array = [];
 
 		this.state = {
-			number_of_projects: 0
+			currentPosition: 0,
+			numberOfProjects: projects.length,
+			numberOfPages: Math.floor(projects.length / 5) + 1,
+			listOfProjectsArray: projects,
+			selectorArray: selector_array,
+			selectedIndex: 0
 		};
+
+		for(var i = 0; i < this.state.numberOfPages; i++)
+		{
+			selector_array.push({
+				position: -1 * (i * window.screen.width)
+			});
+		}
+	}
+
+	componentDidMount() {
+		this.minLeft = 0;
+		this.maxLeft = -window.screen.width * (this.state.numberOfPages - 1);
+	}
+
+	keepInBounds(pos) {
+		var tmp_pos = pos;
+
+		if(tmp_pos > this.minLeft)
+		{
+			tmp_pos = this.minLeft;
+		}
+
+		if(tmp_pos < this.maxLeft)
+		{
+			tmp_pos = this.maxLeft;
+		}
+
+		return tmp_pos;
+	}
+
+	left() {
+		var index = this.state.selectedIndex - 1;
+		this.pos += window.screen.width;
+		this.pos = this.keepInBounds(this.pos);
+
+		this.setState({
+			currentPos: this.pos,
+			selectedIndex: Math.max(0, index)
+		})
+	}
+
+	right() {
+		var index = this.state.selectedIndex + 1;
+		this.pos -= window.screen.width;
+		this.pos = this.keepInBounds(this.pos);
+
+		this.setState({
+			currentPos: this.pos,
+			selectedIndex: Math.min(index, this.state.numberOfPages - 1)
+		})
 	}
 
 	handleLeftAreaClick() {
-		const wrapper = this.pcRef.current;
-		this.currentPos += window.screen.width;
-
-		if(this.currentPos > this.minLeft)
-		{
-			this.currentPos = this.minLeft;
-		}
-
-		wrapper.style.left = this.currentPos+"px";
+		this.left();
 	}
 
 	handleRightAreaClick() {
-		const wrapper = this.pcRef.current;
-		this.currentPos -= window.screen.width;
-		console.log(this.pcRef);
+		this.right();
+	}
 
-		if(this.currentPos < this.maxLeft)
-		{
-			this.currentPos = this.maxLeft;
-		}
+	handleSelectorChange(index, target_pos) {
+		this.pos = target_pos;
+		this.pos = this.keepInBounds(this.pos);
 
-		wrapper.style.left = this.currentPos+"px";
+		this.setState({
+			currentPos: this.pos,
+			selectedIndex: index
+		})
+	}
+
+	componentDidUpdate() {
+		const wrapper = this.projectsCarrouselRef.current;
+		wrapper.style.left = this.state.currentPos + "px";
 	}
 
 	render() {
-		this.number_of_projects = React.Children.count(this.props.children);
-		const link_1minute = "https://frangrande.itch.io/1minute";
-		
-		const logo_asteroidsron = "https://img.itch.zone/aW1hZ2UvODYwNzMvNDA1OTAwLmdpZg==/original/AmJ2nU.gif";
-		const link_asteroidsron = "https://frangrande.itch.io/asteroidsnron";
-
 		return (
 			<div>
-				<div ref={this.pcRef} name="projects-carrousel" className="projects-carrousel">
-					<ProjectDoor name="1Minute" image_url={logo_1minute} game_link={link_1minute} />
-					<ProjectDoor name="Asteroids & Ron" image_url={logo_asteroidsron} game_link={link_asteroidsron} />
-					<ProjectDoor name="TetrisClon" />
-					<ProjectDoor name="BumperBallClon" />
-					<ProjectDoor name="Cthulhumpage" />
-					<ProjectDoor name="CurillaVSEvil" />
-					<ProjectDoor name="TopItUp" />
-					<ProjectDoor name="JuegosParaMaribel" />
-					<ProjectDoor name="King Skeleton" />
-					<ProjectDoor name="PangClon" />
-					<ProjectDoor name="PongClon" />
-					<ProjectDoor name="ShaderLibrary" />
-					<ProjectDoor name="SnakeClon" />
-					<ProjectDoor name="TetrisFight" />
+				<div ref={this.projectsSelectorRef} name="projects-selector" className="projects-selector">
+					{this.state.selectorArray.map((item, index) => (
+						<div key={index}>
+							<input type="radio" name="selector" onChange={() => this.handleSelectorChange(index, item.position)} checked={index === this.state.selectedIndex} />
+							<span className="selector_circle"></span>
+						</div>
+					))}
 				</div>
-				<div id="carrousel-left-area" onClick={() => this.handleLeftAreaClick()}>{"←"}</div>
-				<div id="carrousel-right-area" onClick={() => this.handleRightAreaClick()}>{"→"}</div>
+				<div ref={this.projectsCarrouselRef} name="projects-carrousel" className="projects-carrousel">
+					{this.state.listOfProjectsArray.map((item, index) => (
+						<ProjectDoor key={index} name={item.name} image_url={item.logo} game_link={item.link} />
+					))}
+				</div>
+				<div id="carrousel-left-area" className="no-select" onClick={() => this.handleLeftAreaClick()}>{"←"}</div>
+				<div id="carrousel-right-area" className="no-select" onClick={() => this.handleRightAreaClick()}>{"→"}</div>
 			</div>
 		)
 	}

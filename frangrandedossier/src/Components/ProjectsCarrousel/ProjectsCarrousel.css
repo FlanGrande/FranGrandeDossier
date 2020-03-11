@@ -1,15 +1,103 @@
+.projects-selector
+{
+	position: absolute;
+	top: -60px;
+	left: 50vw;
+	width: 200px;
+	margin-left: -100px;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+}
+
+.projects-selector div
+{
+	position: relative;
+	flex: 1;
+}
+
+.projects-selector div input[type="radio"]
+{
+	position: absolute;
+	top: -5px;
+	left: 0;
+	margin: 0 auto;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.projects-selector div .selector_circle
+{
+	transition: all 0.2s ease-in-out;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+	display: flex;
+	height: 20px;
+	width: 20px;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.projects-selector div:hover .selector_circle
+{
+	top: -5px;
+	height: 30px;
+	width: 30px;
+}
+
+.projects-selector div input[type="radio"]:checked ~ .selector_circle
+{
+	top: -5px;
+	height: 30px;
+	width: 30px;
+	background-color: #FFFFFF;
+}
+
+.projects-selector div input[type="radio"] ~ .selector_circle::after
+{
+	transition: all 0.2s ease-in-out;
+	content: ' ';
+	position: relative;
+	top: 10px;
+	left: 0;
+	margin: 0 auto;
+	height: 2px;
+	width: 2px;
+	background-color: #FF8844;
+	border-radius: 50%;
+	opacity: 0;
+	z-index: 0;
+}
+
+.projects-selector div input[type="radio"]:checked ~ .selector_circle::after
+{
+	content: ' ';
+	position: relative;
+	top: 4px;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	margin: 0 auto;
+	opacity: 1;
+}
+
 .projects-carrousel
 {
 	transition: all 1.6s ease-in-out;
 	position: absolute;
 	top: 0;
-	/*left: 10vw;*/
 	left: 0;
 	display: flex;
-	/*height: 580px;*/
 	margin: 0px;
-	height: 62vh;
-	width: 300vw;
+	height: 62.5vh;
+	width: 900vw;
 }
 
 #carrousel-left-area
@@ -58,4 +146,10 @@
 {
 	background-color: #FFFFFF;
 	color: black;
+}
+
+#txt_content
+{
+	position: absolute;
+	visibility: hidden;
 }
