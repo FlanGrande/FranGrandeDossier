@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df5c753b.chunk.css",
+    "main.js": "/static/js/main.e2bc8017.chunk.js",
+    "main.js.map": "/static/js/main.e2bc8017.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1e89bdde.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1e89bdde.js.map",
+    "static/js/2.61f5f1f8.chunk.js": "/static/js/2.61f5f1f8.chunk.js",
+    "static/js/2.61f5f1f8.chunk.js.map": "/static/js/2.61f5f1f8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.be8ede47e9efe143011dcab0315f2b3d.js": "/precache-manifest.be8ede47e9efe143011dcab0315f2b3d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.df5c753b.chunk.css.map": "/static/css/main.df5c753b.chunk.css.map",
+    "static/js/2.61f5f1f8.chunk.js.LICENSE.txt": "/static/js/2.61f5f1f8.chunk.js.LICENSE.txt",
+    "static/media/door_reflection.png": "/static/media/door_reflection.af1a39b5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1e89bdde.js",
+    "static/js/2.61f5f1f8.chunk.js",
+    "static/css/main.df5c753b.chunk.css",
+    "static/js/main.e2bc8017.chunk.js"
+  ]
+}
