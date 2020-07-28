@@ -57,7 +57,7 @@ metal-orange: #dd810d;
 	margin: 0;
 	padding: 0;
 	z-index: 2;
-	transition: all 1.6s linear;
+	transition: all 2.2s ease-in;
 }
 
 .door_bottom
@@ -68,19 +68,19 @@ metal-orange: #dd810d;
 	margin: 0;
 	padding: 0;
 	z-index: 2;
-	transition: all 1.6s linear;
+	transition: all 2.2s ease-in;
 }
 
 .project-door-box.open .door_top
 {
 	top: -280px;
-	transition: all 0.6s linear;
+	transition: all 0.6s ease-out;
 }
 
 .project-door-box.open .door_bottom
 {
 	top: 280px;
-	transition: all 0.6s linear;
+	transition: all 0.6s ease-out;
 }
 
 .project-door-box div .cog
@@ -88,13 +88,13 @@ metal-orange: #dd810d;
 	position: absolute;
 	z-index: 1;
 	transform: rotate(0);
-	transition: all 1.6s linear;
+	transition: all 2.2s ease-in;
 }
 
 .project-door-box.open div .cog
 {
 	transform: rotate(180deg);
-	transition: all 0.6s linear;
+	transition: all 0.6s ease-out;
 }
 
 .project-door-box.open div .cog.c1,
@@ -103,7 +103,7 @@ metal-orange: #dd810d;
 .project-door-box.open div .cog.c7
 {
 	transform: rotate(-180deg);
-	transition: all 0.6s linear;
+	transition: all 0.6s ease-out;
 }
 
 .cogs-left

@@ -16,8 +16,8 @@
 	flex: 1;
 }
 
-.projects-selector div input[type="radio"
-]{
+.projects-selector div input[type="radio"]
+{
 	position: absolute;
 	top: -5px;
 	left: 0;
