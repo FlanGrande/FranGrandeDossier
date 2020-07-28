@@ -14,7 +14,8 @@ function App() {
 				<ProjectsCarrousel></ProjectsCarrousel>
 			</div>
 			<div id="footer" className="App-footer no-select">
-				<p>This is a collection of Fran Grande's personal works.</p>
+				<p>This is a collection of Fran Grande's works.</p>
+				<p>Doors take you to itch.io</p>
 			</div>
 		</div>
 	);
