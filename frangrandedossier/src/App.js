@@ -8,7 +8,7 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<h1 className="no-select">Flan Grande's Dossier</h1>
+				<h1 className="no-select">FlanGrande's Dossier</h1>
 			</header>
 			<div className="App-body no-select">
 				<ProjectsCarrousel></ProjectsCarrousel>
