@@ -1,13 +1,14 @@
 ---
 deployment:
   tasks:
+    - export SOURCEPATH=/home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/build
     - export DEPLOYPATH=/home/z0qzj7w8/public_html/
-    - /bin/cp -R /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/build/static $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/index.html $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/asset-manifest.json $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/favicon.ico $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/logo192.png $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/logo512.png $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/manifest.json $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/robots.txt $DEPLOYPATH
-    - /bin/cp /home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/service-worker.js $DEPLOYPATH
+    - /bin/cp -R $SOURCEPATH/static $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/index.html $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/asset-manifest.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/favicon.ico $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/logo192.png $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/logo512.png $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/manifest.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/robots.txt $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/service-worker.js $DEPLOYPATH
