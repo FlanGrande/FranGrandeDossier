@@ -23,8 +23,8 @@ metal-orange: #dd810d;
 .frame
 {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: -8px;
+	left: -8px;
 	z-index: 4;
 }
 
@@ -58,6 +58,7 @@ metal-orange: #dd810d;
 	padding: 0;
 	z-index: 2;
 	transition: all 2.2s ease-in;
+	backface-visibility: hidden;
 }
 
 .door_bottom
@@ -69,6 +70,7 @@ metal-orange: #dd810d;
 	padding: 0;
 	z-index: 2;
 	transition: all 2.2s ease-in;
+	backface-visibility: hidden;
 }
 
 .project-door-box.open .door_top
@@ -108,16 +110,24 @@ metal-orange: #dd810d;
 
 .cogs-left
 {
-	position: relative;
+	overflow: hidden;
+	position: absolute;
 	top: -16px;
-	left: -4px;
+	left: 10px;
+	width: 98%;
+	height: 100%;
+	backface-visibility: hidden;
 }
 
 .cogs-right
 {
-	position: relative;
-	top: -140px;
-	left: 16px;
+	overflow: hidden;
+	position: absolute;
+	top: -112px;
+	left: 12px;
+	width: 98%;
+	height: 100%;
+	backface-visibility: hidden;
 }
 
 .cog.c1
