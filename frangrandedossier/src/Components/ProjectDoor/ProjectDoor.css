@@ -32,10 +32,10 @@ metal-orange: #dd810d;
 {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 1px;
 	z-index: 0;
-	height: 100%;
-	width: 276px;
+	height: 98%;
+	width: 274px;
 	object-fit: cover;
 	object-position: 0 0;
 }
