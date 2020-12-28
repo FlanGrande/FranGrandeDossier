@@ -16,6 +16,7 @@ function App() {
 			<div id="footer" className="App-footer no-select">
 				<p>This is a collection of Fran Grande's works.</p>
 				<p>Doors take you to itch.io</p>
+				<p class="small-note">Website optimised for 1920x1080</p>
 			</div>
 		</div>
 	);

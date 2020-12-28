@@ -1,3 +1,15 @@
+/* This is supposed to remove anti-aliasing when rescaling images. */
+img
+{ 
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: crisp-edges; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
 /*
 orange: #ffa10f;
 metal-orange: #dd810d;
@@ -9,6 +21,9 @@ metal-orange: #dd810d;
 	overflow: hidden;
 	/*margin: 0 8px;*/
 	width: 20vw;
+	min-width: 274px;
+	height: 588px;
+	/*transform: scale(0.5);*/
 }
 
 .project-door-box .wrapper
@@ -112,7 +127,7 @@ metal-orange: #dd810d;
 {
 	overflow: hidden;
 	position: absolute;
-	top: -40px;
+	top: -24px;
 	left: 10px;
 	width: 98%;
 	height: 100%;
@@ -232,4 +247,92 @@ metal-orange: #dd810d;
 {
 	left: initial;
 	right: 12px;
+}
+
+
+/* RESPONSIVE RULES */
+@media (max-height: 900px)
+{
+	.project-door-box
+	{
+		transform: scale(0.8) translateY(-8vh);
+	}
+}
+
+@media (max-height: 760px)
+{
+	.project-door-box
+	{
+		transform: scale(0.6) translateY(-24vh);
+	}
+}
+
+@media (max-height: 640px)
+{
+	.project-door-box
+	{
+		transform: scale(0.5) translateY(-42vh);
+	}
+}
+
+@media (max-height: 520px)
+{
+	.project-door-box
+	{
+		transform: scale(0.4) translateY(-76vh);
+	}
+}
+
+@media (max-width: 1400px)
+{
+	.project-door-box
+	{
+		transform: scale(0.8) translateX(-0vw);
+	}
+}
+
+@media (max-width: 1360px)
+{
+	/*.projects-selector
+	{
+		display: none !important;
+	}
+
+	#carrousel-left-area
+	{
+		display: none !important;
+	}
+
+	#carrousel-right-area
+	{
+		display: none !important;
+	}
+
+	.projects-carrousel
+	{
+		flex-direction: column;
+		width: 100vw;
+	}
+
+	.project-door-box
+	{
+		transform: scaleX(4) scaleY(0.2);
+		width: 100vw !important;
+	}*/
+}
+
+@media (max-width: 1000px)
+{
+	.project-door-box
+	{
+		transform: scale(0.5) translateX(-42vw);
+	}
+}
+
+@media (max-width: 800px)
+{
+	.project-door-box
+	{
+		transform: scale(0.4) translateX(-76vw);
+	}
 }

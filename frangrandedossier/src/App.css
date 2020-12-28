@@ -35,8 +35,13 @@ html
 }
 
 .App-body {
-  position: absolute;
+  position: relative;
   top: 24vh;
+  height: 64vh;
+}
+
+.App-body > div {
+  height: 100%;
 }
 
 .App-footer {
@@ -51,6 +56,10 @@ html
   justify-content: center;
   font-size: calc(2px + 2vmin);
   color: white;
+}
+
+.App-footer .small-note {
+  font-size: calc((2px + 2vmin)/2);
 }
 
 .App-link {

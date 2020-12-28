@@ -1,9 +1,10 @@
 .projects-selector
 {
 	position: absolute;
-	top: -60px;
+	top: -6vh;
 	left: 50vw;
 	width: 200px;
+    min-height: 32px;
 	margin-left: -100px;
 	display: flex;
 	flex-direction: row;
@@ -91,12 +92,13 @@
 .projects-carrousel
 {
 	transition: all 1.6s ease-in-out;
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	display: flex;
-	margin: 0px;
-	height: 62.5vh;
+	margin: 0;
+	height: 588px;
+    max-height: 64vh;
 	width: 900vw;
 }
 
