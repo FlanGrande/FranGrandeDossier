@@ -7,6 +7,9 @@ html
 .App {
   text-align: center;
   background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -38,6 +41,7 @@ html
   position: relative;
   top: 24vh;
   height: 64vh;
+  width: 100vw;
 }
 
 .App-body > div {
