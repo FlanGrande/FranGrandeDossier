@@ -1,7 +1,7 @@
 .projects-selector
 {
 	position: absolute;
-	top: -6vh;
+	top: 4vh;
 	left: 50vw;
 	width: 200px;
     min-height: 32px;
@@ -93,12 +93,11 @@
 {
 	transition: all 1.6s ease-in-out;
 	position: relative;
-	top: 0;
+	top: 10vh;
 	left: 0;
 	display: flex;
 	margin: 0;
-	height: 588px;
-    max-height: 64vh;
+	height: 78vh;
 	width: 900vw;
 }
 
@@ -108,7 +107,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 22vh;
+	height: 8vh;
 	width: 10vw;
 	z-index: 10;
 	display: flex;
@@ -126,7 +125,7 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	height: 22vh;
+	height: 8vh;
 	width: 10vw;
 	z-index: 10;
 	display: flex;
@@ -140,14 +139,14 @@
 
 #carrousel-left-area:hover
 {
-	background-color: #FFFFFF;
-	color: black;
+	background-color: black;
+	color: #FF8844;
 }
 
 #carrousel-right-area:hover
 {
-	background-color: #FFFFFF;
-	color: black;
+	background-color: black;
+	color: #FF8844;
 }
 
 #txt_content
