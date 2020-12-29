@@ -21,17 +21,34 @@ metal-orange: #dd810d;
 	overflow: hidden;
 	/*margin: 0 8px;*/
 	width: 20vw;
-	min-width: 274px;
-	height: 588px;
+	min-width: 282px;
+	min-height: 594px;
 	transition: all 1s;
 	/*transform: scale(0.5);*/
 }
 
+/* This is the door frame */
+.project-door-box .wrapper:first-child
+{
+	/* Interesting. This centers an absolute element, similar to what margin: 0 auto tries to do for relative elements. */
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	overflow: visible;
+	height: 594px;
+	width: 282px;
+	z-index: 4;
+}
+
+/* This is what's behind the door frame */
 .project-door-box .wrapper
 {
 	position: relative;
 	overflow: hidden;
-	height: 100%;
+	height: 588px;
 	width: 276px;
 	margin: 0 auto;
 }
@@ -39,9 +56,10 @@ metal-orange: #dd810d;
 .frame
 {
 	position: absolute;
-	top: -8px;
-	left: -8px;
+	top: -3px;
+	left: 3px;
 	z-index: 4;
+	backface-visibility: hidden;
 }
 
 .game_logo
@@ -50,10 +68,11 @@ metal-orange: #dd810d;
 	top: 0;
 	left: 1px;
 	z-index: 0;
-	height: 98%;
+	height: 588px;
 	width: 274px;
 	object-fit: cover;
 	object-position: 0 0;
+	backface-visibility: hidden;
 }
 
 .door_reflection
@@ -63,6 +82,7 @@ metal-orange: #dd810d;
 	left: 0;
 	z-index: 3;
 	height: 100%;
+	backface-visibility: hidden;
 }
 
 .door_top
@@ -256,7 +276,7 @@ metal-orange: #dd810d;
 {
 	.project-door-box
 	{
-		transform: scale(0.8) translateY(-8vh);
+		transform: scale(0.9) translateY(0vh);
 	}
 }
 
@@ -264,23 +284,55 @@ metal-orange: #dd810d;
 {
 	.project-door-box
 	{
-		transform: scale(0.6) translateY(-24vh);
+		transform: scale(0.8) translateY(-2vh);
 	}
 }
 
-@media (max-height: 640px)
+@media (max-height: 720px)
 {
 	.project-door-box
 	{
-		transform: scale(0.5) translateY(-42vh);
+		transform: scale(0.8) translateY(-6vh);
 	}
 }
 
-@media (max-height: 520px)
+@media (max-height: 660px)
 {
 	.project-door-box
 	{
-		transform: scale(0.4) translateY(-76vh);
+		transform: scale(0.7) translateY(-14vh);
+	}
+}
+
+@media (max-height: 580px)
+{
+	.project-door-box
+	{
+		transform: scale(0.7) translateY(-20vh);
+	}
+}
+
+@media (max-height: 540px)
+{
+	.project-door-box
+	{
+		transform: scale(0.6) translateY(-30vh);
+	}
+}
+
+@media (max-height: 500px)
+{
+	.project-door-box
+	{
+		transform: scale(0.5) translateY(-50vh);
+	}
+}
+
+@media (max-height: 440px)
+{
+	.project-door-box
+	{
+		transform: scale(0.4) translateY(-100vh);
 	}
 }
 
@@ -294,39 +346,17 @@ metal-orange: #dd810d;
 
 @media (max-width: 1360px)
 {
-	/*.projects-selector
-	{
-		display: none !important;
-	}
-
-	#carrousel-left-area
-	{
-		display: none !important;
-	}
-
-	#carrousel-right-area
-	{
-		display: none !important;
-	}
-
-	.projects-carrousel
-	{
-		flex-direction: column;
-		width: 100vw;
-	}
-
 	.project-door-box
 	{
-		transform: scaleX(4) scaleY(0.2);
-		width: 100vw !important;
-	}*/
+		transform: scale(0.6) translateY(-24vh);
+	}
 }
 
 @media (max-width: 1000px)
 {
 	.project-door-box
 	{
-		transform: scale(0.5) translateX(-42vw);
+		transform: scale(0.5) translateY(-42vh);
 	}
 }
 
@@ -334,6 +364,6 @@ metal-orange: #dd810d;
 {
 	.project-door-box
 	{
-		transform: scale(0.4) translateX(-76vw);
+		transform: scale(0.4) translateY(-76vh);
 	}
 }

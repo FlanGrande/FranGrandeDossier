@@ -77,6 +77,11 @@ class ProjectDoor extends React.Component {
 						  }
 					}}/>*/}
 				<div className="wrapper">
+					<a href={this.props.game_link} target="_blank" rel="noopener noreferrer">
+						<img className="frame" alt="frame" src={frame} onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()} draggable="false" />
+					</a>
+				</div>
+				<div className="wrapper">
 					<div className="cogs-left">
 						<img className="cog c1" alt="cog" src={cog} draggable="false" />
 						<img className="cog c2" alt="cog" src={cog} draggable="false" />
@@ -97,9 +102,6 @@ class ProjectDoor extends React.Component {
 						<img className="cog c7" alt="cog" src={cog} draggable="false" />
 						<img className="cog c8" alt="cog" src={cog} draggable="false" />
 					</div>
-					<a href={this.props.game_link} target="_blank" rel="noopener noreferrer">
-						<img className="frame" alt="frame" src={frame} onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()} draggable="false" />
-					</a>
 					{/*<img className="door_reflection" alt="door_reflection" src={door_reflection} />*/}
 					<img className="game_logo" alt={this.props.name} src={this.props.image_url} draggable="false" />
 					<img className="door_top" alt="door_top" src={door_top} draggable="false" />
