@@ -83,8 +83,6 @@ class ProjectsCarrousel extends React.Component {
 	}
 
 	handleSelectorChange(index, target_pos) {
-		this.minLeft = 0;
-		this.maxLeft = -window.innerWidth * (this.state.numberOfPages - 1);
 		this.pos = target_pos;
 		this.pos = this.keepInBounds(this.pos);
 
