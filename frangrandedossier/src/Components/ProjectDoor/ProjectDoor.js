@@ -1,4 +1,5 @@
 import React from 'react';
+/*import Particles from 'reactparticles'*/
 import frame from './frame.png';
 import door_reflection from './door_reflection.png';
 import door_top from './door_top.png';
@@ -31,6 +32,50 @@ class ProjectDoor extends React.Component {
 	render() {
 		return (
 			<div ref={this.wrapperRef} id={this.props.name} className="project-door-box">
+			{/*<Particles 
+					id={this.props.name + "-particles"}
+					className="spark-particles"
+					options={{
+						fpsLimit: 60,
+						particles: {
+							color: {
+							  value: "#df8400",
+							},
+							collisions: {
+							  enable: true,
+							},
+							move: {
+							  direction: "bottom",
+							  enable: true,
+							  outMode: "bounce",
+							  random: false,
+							  speed: 6,
+							  straight: false,
+							  trail: {
+								  enable: true,
+								  fillColor: "#ffcc88",
+								  length: 0.1
+							  }
+							},
+							number: {
+							  density: {
+								enable: false,
+								value_area: 800,
+							  },
+							  value: 10,
+							},
+							opacity: {
+							  value: 0.9,
+							},
+							shape: {
+							  type: "line",
+							},
+							size: {
+							  random: true,
+							  value: 5,
+							},
+						  }
+					}}/>*/}
 				<div className="wrapper">
 					<div className="cogs-left">
 						<img className="cog c1" alt="cog" src={cog} draggable="false" />
