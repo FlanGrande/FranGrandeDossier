@@ -23,17 +23,20 @@ class ProjectsCarrousel extends React.Component {
 		for(var i = 0; i < this.state.numberOfPages; i++)
 		{
 			selector_array.push({
-				position: -1 * (i * window.screen.width)
+				position: -1 * (i * window.innerWidth)
 			});
 		}
 	}
 
 	componentDidMount() {
 		this.minLeft = 0;
-		this.maxLeft = -window.screen.width * (this.state.numberOfPages - 1);
+		this.maxLeft = -window.innerWidth * (this.state.numberOfPages - 1);
 	}
 
 	keepInBounds(pos) {
+		this.minLeft = 0;
+		this.maxLeft = -window.innerWidth * (this.state.numberOfPages - 1);
+		
 		var tmp_pos = pos;
 
 		if(tmp_pos > this.minLeft)
@@ -51,7 +54,7 @@ class ProjectsCarrousel extends React.Component {
 
 	left() {
 		var index = this.state.selectedIndex - 1;
-		this.pos += window.screen.width;
+		this.pos += window.innerWidth;
 		this.pos = this.keepInBounds(this.pos);
 
 		this.setState({
@@ -62,7 +65,7 @@ class ProjectsCarrousel extends React.Component {
 
 	right() {
 		var index = this.state.selectedIndex + 1;
-		this.pos -= window.screen.width;
+		this.pos -= window.innerWidth;
 		this.pos = this.keepInBounds(this.pos);
 
 		this.setState({
@@ -80,6 +83,8 @@ class ProjectsCarrousel extends React.Component {
 	}
 
 	handleSelectorChange(index, target_pos) {
+		this.minLeft = 0;
+		this.maxLeft = -window.innerWidth * (this.state.numberOfPages - 1);
 		this.pos = target_pos;
 		this.pos = this.keepInBounds(this.pos);
 
