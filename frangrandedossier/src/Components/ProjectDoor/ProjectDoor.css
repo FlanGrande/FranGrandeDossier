@@ -19,12 +19,11 @@ metal-orange: #dd810d;
 {
 	position: relative;
 	overflow: hidden;
-	/*margin: 0 8px;*/
+	margin: 0;
 	width: 20vw;
 	min-width: 282px;
 	min-height: 594px;
 	transition: all 1s;
-	/*transform: scale(0.5);*/
 }
 
 /* This is the door frame */
@@ -47,6 +46,8 @@ metal-orange: #dd810d;
 .project-door-box .wrapper
 {
 	position: relative;
+	top: 3px;
+	left: 3px;
 	overflow: hidden;
 	height: 588px;
 	width: 276px;
@@ -56,8 +57,8 @@ metal-orange: #dd810d;
 .frame
 {
 	position: absolute;
-	top: -3px;
-	left: 3px;
+	top: 0;
+	left: 0;
 	z-index: 4;
 	backface-visibility: hidden;
 }
