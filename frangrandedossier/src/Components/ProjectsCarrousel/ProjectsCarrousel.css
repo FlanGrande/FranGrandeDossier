@@ -91,7 +91,7 @@
 
 .projects-carrousel
 {
-	transition: all 1.6s ease-in-out;
+	transition: all 3.0s ease-out;
 	position: relative;
 	top: 10vh;
 	left: 0;
