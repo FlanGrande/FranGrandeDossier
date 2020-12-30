@@ -154,3 +154,19 @@
 	position: absolute;
 	visibility: hidden;
 }
+
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+		only screen and (-o-min-device-pixel-ratio: 2/1), 
+		only screen and (-webkit-min-device-pixel-ratio: 2), 
+		only screen and (min-device-pixel-ratio: 2) {
+		/*use CSS to swap out your low res images with high res ones here*/
+	#carrousel-left-area
+	{
+		font-size: calc(32px + 1vmin);
+	}
+
+	#carrousel-right-area
+	{
+		font-size: calc(32px + 1vmin);
+	}
+}   
