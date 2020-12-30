@@ -456,7 +456,7 @@ metal-orange: #dd810d;
 {
 	.project-door-box
 	{
-		transform: scale(0.5) translateY(-36vh);
+		transform: scale(0.5) translateY(-38vh);
 		margin-right: -1%;
 	}
 }
@@ -473,7 +473,7 @@ metal-orange: #dd810d;
 {
 	.project-door-box
 	{
-		transform: scale(0.4) translateY(-56vh);
+		transform: scale(0.4) translateY(-62vh);
 		margin-right: -1.42%;
 	}
 }
@@ -482,7 +482,25 @@ metal-orange: #dd810d;
 {
 	.project-door-box
 	{
-		transform: scale(0.4) translateY(-56vh);
+		transform: scale(0.4) translateY(-62vh);
 		margin-right: -1.7%;
+	}
+}
+
+@media (max-width: 800px)
+{
+	.project-door-box
+	{
+		transform: scale(0.3) translateY(-100vh);
+		margin-right: -1.96%;
+	}
+}
+
+
+@media (max-width:1450px) and (max-height:500px)
+{
+	.project-door-box
+	{
+		transform: scale(0.3) translateY(-140vh);
 	}
 }
