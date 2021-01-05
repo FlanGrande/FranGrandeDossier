@@ -1,11 +1,12 @@
 import React from 'react';
-/*import Particles from 'reactparticles'*/
+import Particles from 'react-tsparticles'
 import frame from './frame.png';
 import door_reflection from './door_reflection.png';
 import door_top from './door_top.png';
 import door_bottom from './door_bottom.png';
 import cog from './cog.png';
 import "./ProjectDoor.css";
+import "./ProjectDoorParticles.css"
 
 class ProjectDoor extends React.Component {
 	constructor(props) {
@@ -32,56 +33,58 @@ class ProjectDoor extends React.Component {
 	render() {
 		return (
 			<div ref={this.wrapperRef} id={this.props.name} className="project-door-box">
-			{/*<Particles 
-					id={this.props.name + "-particles"}
-					className="spark-particles"
-					options={{
-						fpsLimit: 60,
-						particles: {
-							color: {
-							  value: "#df8400",
-							},
-							collisions: {
-							  enable: true,
-							},
-							move: {
-							  direction: "bottom",
-							  enable: true,
-							  outMode: "bounce",
-							  random: false,
-							  speed: 6,
-							  straight: false,
-							  trail: {
-								  enable: true,
-								  fillColor: "#ffcc88",
-								  length: 0.1
-							  }
-							},
-							number: {
-							  density: {
-								enable: false,
-								value_area: 800,
-							  },
-							  value: 10,
-							},
-							opacity: {
-							  value: 0.9,
-							},
-							shape: {
-							  type: "line",
-							},
-							size: {
-							  random: true,
-							  value: 5,
-							},
-						  }
-					}}/>*/}
 				<div className="wrapper">
 					<a href={this.props.game_link} target="_blank" rel="noopener noreferrer">
 						<img className="frame" alt="frame" src={frame} onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()} draggable="false" />
 					</a>
 				</div>
 				<div className="wrapper">
+					{/*<Particles 
+						id={this.props.name + "-particles"}
+						className="spark-particles"
+						options={{
+							fpsLimit: 60,
+							particles: {
+								number: {
+									density: {
+										enable: true,
+										value_area: 8
+									},
+									value: 1
+								},
+								color: {
+									value: "#ff8400"
+								},
+								shape: {
+									type: "circle"
+								},
+								opacity: {
+									value: 1.0
+								},
+								size: {
+									random: true,
+									value: 2
+								},
+								move: {
+									direction: "right",
+									enable: true,
+									outMode: "bottom",
+									random: true,
+									speed: 2,
+									straight: true,
+									trail: {
+										enable: true,
+										length: 6.0
+									},
+									gravity: {
+										enable: true,
+										acceleration: 4.0,
+										maxSpeed: 30.0
+									}
+								}
+							},
+
+						}}/>*/}
 					<div className="cogs-left">
 						<img className="cog c1" alt="cog" src={cog} draggable="false" />
 						<img className="cog c2" alt="cog" src={cog} draggable="false" />
