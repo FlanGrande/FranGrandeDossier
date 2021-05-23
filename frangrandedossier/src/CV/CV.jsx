@@ -19,11 +19,6 @@ function CV() {
 			<div className="App-body no-select">
 				<h1>CV</h1>
 			</div>
-			<div id="footer" className="App-footer no-select">
-				<p>This is a collection of <a className="App-link" href="mailto: francisjgrande@gmail.com">Fran Grande</a>'s works</p>
-				<p>Doors take you to itch.io</p>
-				<p className="small-note">Website optimised for 1920x1080</p>
-			</div>
 		</div>
 	);
 }
