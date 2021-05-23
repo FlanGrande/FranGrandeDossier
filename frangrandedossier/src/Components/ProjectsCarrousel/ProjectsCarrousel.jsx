@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectDoor from '../ProjectDoor/ProjectDoor.js';
+import ProjectDoor from '../ProjectDoor/ProjectDoor.jsx';
 import projects from '../../Assets/list_of_projects.json';
 import "./ProjectsCarrousel.css";
 
@@ -110,7 +110,7 @@ class ProjectsCarrousel extends React.Component {
 				</div>
 				<div ref={this.projectsCarrouselRef} name="projects-carrousel" className="projects-carrousel">
 					{this.state.listOfProjectsArray.map((item, index) => (
-						<ProjectDoor key={index} name={item.name} image_url={item.logo} game_link={item.link} />
+						<ProjectDoor key={index} name={item.name} image_url={item.logo} game_link={item.link} className={"project-door-box dw" + index} />
 					))}
 				</div>
 				<div id="carrousel-left-area" className="no-select" onClick={() => this.handleLeftAreaClick()}>{"←"}</div>

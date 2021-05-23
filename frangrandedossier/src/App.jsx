@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectsCarrousel from './Components/ProjectsCarrousel/ProjectsCarrousel.js';
+import ProjectsCarrousel from './Components/ProjectsCarrousel/ProjectsCarrousel.jsx';
 import './App.css';
 import './FranDossier.css';
 
@@ -18,6 +18,7 @@ function App() {
 			<header className="App-header">
 			</header>
 			<div className="App-body no-select">
+				{/* TO DO: add a parallex background of sorts. */}
 				<ProjectsCarrousel></ProjectsCarrousel>
 			</div>
 			<div id="footer" className="App-footer no-select">

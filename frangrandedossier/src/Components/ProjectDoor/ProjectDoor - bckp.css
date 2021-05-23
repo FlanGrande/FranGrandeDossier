@@ -1,0 +1,568 @@
+/* This is supposed to remove anti-aliasing when rescaling images. */
+img
+{ 
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: crisp-edges; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+/*
+orange: #ffa10f;
+metal-orange: #dd810d;
+*/
+
+.project-door-box
+{
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+	/*margin-right: -0.04%;*/
+	/*width: 20vw;*/
+	min-width: 298px;
+	min-height: 594px;
+	transition: all 1s;
+}
+
+.project-door-box.dw0
+{
+	display: inherit;
+	left: calc(2.1005vw);
+}
+
+.project-door-box.dw1
+{
+	display: inherit;
+	left: calc(3*(2.1005vw) + 1*(15.5208vw));
+}
+
+.project-door-box.dw2
+{
+	display: inherit;
+	left: calc(5*(2.1005vw) + 2*(15.5208vw));
+}
+
+.project-door-box.dw3
+{
+	display: inherit;
+	left: calc(7*(2.1005vw) + 3*(15.5208vw));
+}
+
+.project-door-box.dw4
+{
+	display: inherit;
+	left: calc(9*(2.1005vw) + 4*(15.5208vw));
+}
+
+.project-door-box.dw5
+{
+	display: inherit;
+	left: calc(11*(2.1005vw) + 5*(15.5208vw));
+}
+
+.project-door-box.dw6
+{
+	display: inherit;
+	left: calc(13*(2.1005vw) + 6*(15.5208vw));
+}
+
+.project-door-box.dw7
+{
+	display: inherit;
+	left: calc(15*(2.1005vw) + 7*(15.5208vw));
+}
+
+.project-door-box.dw8
+{
+	display: inherit;
+	left: calc(17*(2.1005vw) + 8*(15.5208vw));
+}
+
+.project-door-box.dw9
+{
+	display: inherit;
+	left: calc(19*(2.1005vw) + 9*(15.5208vw));
+}
+
+.project-door-box.dw10
+{
+	display: inherit;
+	left: calc(21*(2.1005vw) + 10*(15.5208vw));
+}
+
+.project-door-box.dw11
+{
+	display: inherit;
+	left: calc(23*(2.1005vw) + 11*(15.5208vw));
+}
+
+.project-door-box.dw12
+{
+	display: inherit;
+	left: calc(25*(2.1005vw) + 12*(15.5208vw));
+}
+
+/* This is the door frame */
+.project-door-box .wrapper:first-child
+{
+	/* Interesting. This centers an absolute element, similar to what margin: 0 auto tries to do for relative elements. */
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	overflow: visible;
+	height: 594px;
+	width: 282px;
+	z-index: 4;
+}
+
+/* This is what's behind the door frame */
+.project-door-box .wrapper
+{
+	position: relative;
+	top: 3px;
+	left: 3px;
+	overflow: hidden;
+	height: 588px;
+	width: 276px;
+	margin: 0 auto;
+}
+
+.frame
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	backface-visibility: hidden;
+}
+
+.game_logo
+{
+	position: absolute;
+	top: 0;
+	left: 1px;
+	z-index: 0;
+	height: 588px;
+	width: 274px;
+	object-fit: cover;
+	object-position: 0 0;
+	backface-visibility: hidden;
+}
+
+.door_reflection
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.door_top
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+	transition: all 2.2s ease-in;
+	backface-visibility: hidden;
+}
+
+.door_bottom
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+	transition: all 2.2s ease-in;
+	backface-visibility: hidden;
+}
+
+.project-door-box.open .door_top
+{
+	top: -280px;
+	transition: all 0.6s ease-out;
+}
+
+.project-door-box.open .door_bottom
+{
+	top: 280px;
+	transition: all 0.6s ease-out;
+}
+
+.project-door-box div .cog
+{
+	position: absolute;
+	z-index: 1;
+	transform: rotate(0);
+	transition: all 2.2s ease-in;
+}
+
+.project-door-box.open div .cog
+{
+	transform: rotate(180deg);
+	transition: all 0.6s ease-out;
+}
+
+.project-door-box.open div .cog.c1,
+.project-door-box.open div .cog.c3,
+.project-door-box.open div .cog.c5,
+.project-door-box.open div .cog.c7
+{
+	transform: rotate(-180deg);
+	transition: all 0.6s ease-out;
+}
+
+.cogs-left
+{
+	overflow: hidden;
+	position: absolute;
+	top: -24px;
+	left: 10px;
+	width: 98%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.cogs-right
+{
+	overflow: hidden;
+	position: absolute;
+	top: -112px;
+	left: 12px;
+	width: 98%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.cog.c1
+{
+	position: absolute;
+	top: 146px;
+	left: 0px;
+}
+
+.cog.c2
+{
+	position: absolute;
+	top: 200px;
+	left: -12px;
+}
+
+.cog.c3
+{
+	position: absolute;
+	top: 266px;
+	left: -12px;
+}
+
+.cog.c4
+{
+	position: absolute;
+	top: 320px;
+	left: 0px;
+}
+
+.cog.c5
+{
+	position: absolute;
+	top: 386px;
+	left: -12px;
+}
+
+.cog.c6
+{
+	position: absolute;
+	top: 440px;
+	left: 0px;
+}
+
+.cog.c7
+{
+	position: absolute;
+	top: 512px;
+	left: 0px;
+}
+
+.cog.c8
+{
+	position: absolute;
+	top: 572px;
+	left: -12px;
+}
+
+.cogs-right .cog.c1
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c2
+{
+	left: initial;
+	right: 12px;
+}
+
+.cogs-right .cog.c3
+{
+	left: initial;
+	right: 12px;
+}
+
+.cogs-right .cog.c4
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c5
+{
+	left: initial;
+	right: 12px;
+}
+
+.cogs-right .cog.c6
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c7
+{
+	left: initial;
+	right: 0px;
+}
+
+.cogs-right .cog.c8
+{
+	left: initial;
+	right: 12px;
+}
+
+
+/* RESPONSIVE RULES */
+@media (max-height: 900px)
+{
+	.project-door-box
+	{
+		transform: scale(0.9) translateY(0vh);
+	}
+}
+
+@media (max-height: 760px)
+{
+	.project-door-box
+	{
+		transform: scale(0.8) translateY(-2vh);
+	}
+}
+
+@media (max-height: 720px)
+{
+	.project-door-box
+	{
+		transform: scale(0.8) translateY(-6vh);
+	}
+}
+
+@media (max-height: 660px)
+{
+	.project-door-box
+	{
+		transform: scale(0.7) translateY(-14vh);
+	}
+}
+
+@media (max-height: 580px)
+{
+	.project-door-box
+	{
+		transform: scale(0.7) translateY(-20vh);
+	}
+}
+
+@media (max-height: 540px)
+{
+	.project-door-box
+	{
+		transform: scale(0.6) translateY(-30vh);
+	}
+}
+
+@media (max-height: 500px)
+{
+	.project-door-box
+	{
+		transform: scale(0.5) translateY(-50vh);
+	}
+}
+
+@media (max-height: 440px)
+{
+	.project-door-box
+	{
+		transform: scale(0.4) translateY(-100vh);
+	}
+}
+
+@media (max-width: 1560px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1450px)
+{
+	.project-door-box
+	{
+		transform: scale(0.9) translateY(-4vh);
+	}
+}
+
+@media (max-width: 1400px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1380px)
+{
+	.project-door-box
+	{
+		transform: scale(0.8) translateY(-8vh);
+	}
+}
+
+@media (max-width: 1360px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1340px)
+{
+	.project-door-box
+	{
+		transform: scale(0.7) translateY(-14vh);
+	}
+}
+
+@media (max-width: 1300px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1280px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1240px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1210px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1170px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1150px)
+{
+	.project-door-box
+	{
+		transform: scale(0.6) translateY(-22vh);
+	}
+}
+
+@media (max-width: 1100px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1070px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 1040px)
+{
+	.project-door-box
+	{
+		transform: scale(0.5) translateY(-38vh);
+	}
+}
+
+@media (max-width: 990px)
+{
+	.project-door-box
+	{
+	}
+}
+
+@media (max-width: 960px)
+{
+	.project-door-box
+	{
+		transform: scale(0.4) translateY(-62vh);
+	}
+}
+
+@media (max-width: 850px)
+{
+	.project-door-box
+	{
+		transform: scale(0.4) translateY(-62vh);
+	}
+}
+
+@media (max-width: 800px)
+{
+	.project-door-box
+	{
+		transform: scale(0.3) translateY(-100vh);
+	}
+}
+
+
+@media (max-width:1450px) and (max-height:500px)
+{
+	.project-door-box
+	{
+		transform: scale(0.3) translateY(-140vh);
+	}
+}

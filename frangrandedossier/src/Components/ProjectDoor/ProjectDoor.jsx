@@ -32,7 +32,7 @@ class ProjectDoor extends React.Component {
 
 	render() {
 		return (
-			<div ref={this.wrapperRef} id={this.props.name} className="project-door-box">
+			<div ref={this.wrapperRef} id={this.props.name} className={this.props.className}>
 				<div className="wrapper">
 					<a href={this.props.game_link} target="_blank" rel="noopener noreferrer">
 						<img className="frame" alt="frame" src={frame} onMouseEnter={() => this.handleMouseEnter()} onMouseLeave={() => this.handleMouseLeave()} draggable="false" />
