@@ -7,8 +7,6 @@ function App() {
 	React.useEffect(() => {
 		function handleResize() {
 			console.log('resized to: ', window.innerWidth, 'x', window.innerHeight)
-
-			
 		}
 	
 		window.addEventListener('resize', handleResize)

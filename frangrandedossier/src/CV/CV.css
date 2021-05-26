@@ -1,0 +1,113 @@
+html
+{
+    /*background-color: rgba(170, 100, 170, 1.0);*/
+    background-color: #FFFFFF;
+}
+
+body
+{
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: 900;
+}
+
+#CV-left-margin, #CV-right-margin
+{
+	background-color: rgba(170, 100, 170, 0.2);
+}
+
+#CV
+{
+    display: flex;
+    height: 100%;
+    width: 100vw;
+    flex-flow: row;
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+#CV-left-column
+{
+	background-color: rgba(24, 6, 30, 0.85);
+	color: #FFFFFF;
+  	top: 0;
+  	padding: 8px;
+}
+
+#CV-left-column #CV-left-column-container
+{
+	top: 32px;
+}
+
+#powered-by
+{
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	font-weight: 100;
+}
+
+#CV-right-column
+{
+	height: 100%;
+  	padding: 32px;
+	background-color: #FFFFFF;
+    text-align: justify;
+}
+
+#CV-right-column p
+{
+	font-size: 12pt;
+}
+
+#CV-why-hire-me-title
+{
+	margin-bottom: 16px;
+}
+
+#CV-three-keys .CV-one-key h4
+{
+	text-align: center;
+	font-weight: 900;
+	margin-bottom: 0;
+}
+
+#CV-three-keys .CV-one-key i
+{
+	font-size: 40pt;
+	margin-top: 8px;
+	margin-bottom: 16px;
+	height: 60px;
+}
+
+#CV-over-five
+{
+	position: relative;
+	top: -8px;
+}
+
+#CV-three-keys .CV-one-key p
+{
+	font-size: 10pt;
+	text-align: justify;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+#profile-pic
+{
+	max-height: 200px;
+	max-width: 200px;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+#profile-name
+{
+	margin-bottom: 8px;
+}
