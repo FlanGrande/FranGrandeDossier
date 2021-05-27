@@ -22,7 +22,7 @@ function CV() {
 		    </Helmet>
 			<header className="CV-header">
 			</header>
-			<div id="CV-left-margin" className="fran-col-3"></div>
+			<div id="CV-left-margin" className="fran-col-2"></div>
 			<div id="CV-left-column" className="fran-col-2 no-select sticky full-screen-height">
 				<div id="CV-left-column-container" className="sticky">
 					<img id="profile-pic" className="fran-row fran-center" src={profilePic} alt="fran"></img>
@@ -34,7 +34,7 @@ function CV() {
 					<h6>Powered by <i className="fab fa-react"></i> ReactJS</h6>
 				</div>
 			</div>
-			<div id="CV-right-column" className="fran-col-4 no-select">
+			<div id="CV-right-column" className="fran-col-6 no-select">
 				<h2>Profile</h2>
 				<p>Web developer with more than 5 years of experience in a professional setting, having shipped tens of projects, participating from initial stages to delivery production.</p>
 				<p>Adept in a wide array of programming languages, frameworks and platforms:</p>
@@ -84,7 +84,7 @@ function CV() {
 				<h5>2016 to present day, more than 5 years of experience.</h5>
 				<p>Worked actively on tens of different projects for clients around the globe, </p>
 			</div>
-			<div id="CV-right-margin" className="fran-col-3"></div>
+			<div id="CV-right-margin" className="fran-col-2"></div>
 		</div>
 	);
 }
