@@ -81,8 +81,22 @@ function CV() {
 				<hr />
 				<h2>Work experience</h2>
 				<h4>Web Developer at Chauntry Ltd.</h4>
-				<h5>2016 to present day, more than 5 years of experience.</h5>
-				<p>Worked actively on tens of different projects for clients around the globe, </p>
+				<h5>2016 to present day</h5>
+				<ul>
+					<li>Worked on a huge variety of websites used by tens of thousands of users</li>
+					<li>Brought mock-ups to live using ASP.NET MVC, HTML, CSS and various Javascript frameworks</li>
+					<li>Created a tool based on SASS to allow non-technical staff and customers to modify the color pallete of their website</li>
+					<li>Proposed the creation of a mobile dashboard app and developed the frontend of it using Ionic and AngularJS</li>
+					<li>Integrated Google Maps into a website with customizable options like display and colour pallete</li>
+					<li>Implemented internal tools and automation scripts to speed up everyday tasks, using Python and C#</li>
+					<li>Maintained several databases based on SQL</li>
+					<li>Utilised industry-wide tools like Git and SVN for version control</li>
+					<li>Keep websites secure and PCI compliant</li>
+					<li>Added localization for customers that needed multiple languages on their platform</li>
+					<li>Wrote documentation to keep other developers informed about technical details of the projects</li>
+					<li>Handled the server-side of things, e.g. initialize a website using IIS</li>
+					<li>Worked as part of a team with other developers and project managers to bring projects to fruition</li>
+				</ul>			
 			</div>
 			<div id="CV-right-margin" className="fran-col-2"></div>
 		</div>
