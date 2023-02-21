@@ -6,16 +6,18 @@ import App from './App';
 import CV from './CV/CV';
 import * as serviceWorker from './serviceWorker';
 
-const routs = (
+const routes = (
 	<Router>
 		<Switch>
 			<Route exact path="/" component={App} />
 			<Route path="/cv" component={CV} />
+			{/*<Route path="/ThePerlness" component={ThePerlness} />*/}
+			<Route exact path="/ThePerlness" render={() => {window.location.href="/ThePerlness/game.html"}} />
 		</Switch>
 	</Router>
 );
 
-ReactDOM.render(routs, document.getElementById('root'));
+ReactDOM.render(routes, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
