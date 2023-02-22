@@ -138,7 +138,7 @@ PS.init = function(system, options)
 
 	current_level = new Level(level_id);
 
-	PS.statusText("Witness Me");
+	PS.statusText("The Perlness");
 	//PS.statusText("Witness Me " + level_id);
 	PS.statusColor(0xFFFFFF);
 

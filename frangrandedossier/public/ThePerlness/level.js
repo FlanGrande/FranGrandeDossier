@@ -50,50 +50,50 @@ class Level {
 				PS.gridColor(level_to_return.options().background_color);
 
 				return level_to_return;
-			// case 2:
-			// 	// Level 2
-			// 	var level_options = {
-			// 		background_color: 0x00C942,
-			// 		traversable_bead_color: 0x004D1A,
-			// 		non_traversable_bead_color: 0x00C942, //background_color
-			// 		line_color: 0xA5FC14,
-			// 		empty_color: 0x004D1A, //traversable_bead_color
-			// 		starting_point_color: PS.COLOR_BLUE,
-			// 		ending_point_color: PS.COLOR_ORANGE
-			// 	}
-
-			// 	level_to_return = this.generateLevel(5, 5, new Cell(0, 4), new Cell(4, 0), level_options);
-
-			// 	PS.gridSize(level_to_return.width, level_to_return.height);
-			// 	PS.gridColor(level_to_return.options().background_color);
-			// 	level_to_return.addPuzzleWidget(0, 0, "hexagonDot");
-			// 	level_to_return.addPuzzleWidget(4, 4, "hexagonDot");
-
-			// 	return level_to_return;
-			// case 3:
-			// 	// Level 3
-			// 	var level_options = {
-			// 		background_color: 0x00C942,
-			// 		traversable_bead_color: 0x004D1A,
-			// 		non_traversable_bead_color: 0x00C942, //background_color
-			// 		line_color: 0xA5FC14,
-			// 		empty_color: 0x004D1A, //traversable_bead_color
-			// 		starting_point_color: PS.COLOR_BLUE,
-			// 		ending_point_color: PS.COLOR_ORANGE
-			// 	}
-
-			// 	level_to_return = this.generateLevel(7, 7, new Cell(0, 6), new Cell(6, 0), level_options);
-
-			// 	PS.gridSize(level_to_return.width, level_to_return.height);
-			// 	PS.gridColor(level_to_return.options().background_color);
-			// 	level_to_return.addPuzzleWidget(2, 0, "hexagonDot");
-			// 	level_to_return.addPuzzleWidget(4, 2, "hexagonDot");
-			// 	level_to_return.addPuzzleWidget(0, 4, "hexagonDot");
-			// 	level_to_return.addPuzzleWidget(2, 4, "hexagonDot");
-			// 	level_to_return.addPuzzleWidget(6, 6, "hexagonDot");
-
-			// 	return level_to_return;
 			case 2:
+				// Level 2
+				var level_options = {
+					background_color: 0x00C942,
+					traversable_bead_color: 0x004D1A,
+					non_traversable_bead_color: 0x00C942, //background_color
+					line_color: 0xA5FC14,
+					empty_color: 0x004D1A, //traversable_bead_color
+					starting_point_color: PS.COLOR_BLUE,
+					ending_point_color: PS.COLOR_ORANGE
+				}
+
+				level_to_return = this.generateLevel(5, 5, new Cell(0, 4), new Cell(4, 0), level_options);
+
+				PS.gridSize(level_to_return.width, level_to_return.height);
+				PS.gridColor(level_to_return.options().background_color);
+				level_to_return.addPuzzleWidget(0, 0, "hexagonDot");
+				level_to_return.addPuzzleWidget(4, 4, "hexagonDot");
+
+				return level_to_return;
+			case 3:
+				// Level 3
+				var level_options = {
+					background_color: 0x00C942,
+					traversable_bead_color: 0x004D1A,
+					non_traversable_bead_color: 0x00C942, //background_color
+					line_color: 0xA5FC14,
+					empty_color: 0x004D1A, //traversable_bead_color
+					starting_point_color: PS.COLOR_BLUE,
+					ending_point_color: PS.COLOR_ORANGE
+				}
+
+				level_to_return = this.generateLevel(7, 7, new Cell(0, 6), new Cell(6, 0), level_options);
+
+				PS.gridSize(level_to_return.width, level_to_return.height);
+				PS.gridColor(level_to_return.options().background_color);
+				level_to_return.addPuzzleWidget(2, 0, "hexagonDot");
+				level_to_return.addPuzzleWidget(4, 2, "hexagonDot");
+				level_to_return.addPuzzleWidget(0, 4, "hexagonDot");
+				level_to_return.addPuzzleWidget(2, 4, "hexagonDot");
+				level_to_return.addPuzzleWidget(6, 6, "hexagonDot");
+
+				return level_to_return;
+			case 4:
 				// Level 4
 				var level_options = {
 					background_color: 0x00C942,
