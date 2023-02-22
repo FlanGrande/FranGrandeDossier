@@ -11,7 +11,6 @@ const routes = (
 		<Switch>
 			<Route exact path="/" component={App} />
 			<Route path="/cv" component={CV} />
-			{/*<Route path="/ThePerlness" component={ThePerlness} />*/}
 			<Route exact path="/ThePerlness" render={() => {window.location.href="/ThePerlness/game.html"}} />
 		</Switch>
 	</Router>
