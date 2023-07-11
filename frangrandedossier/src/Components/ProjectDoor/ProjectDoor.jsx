@@ -106,7 +106,17 @@ class ProjectDoor extends React.Component {
 						<img className="cog c8" alt="cog" src={cog} draggable="false" />
 					</div>
 					{/*<img className="door_reflection" alt="door_reflection" src={door_reflection} />*/}
-					<img className="game_logo" alt={this.props.name} src={this.props.image_url} draggable="false" />
+
+					{/* If this.props.image_url contains webm, use video html tag instead */}
+					{
+						this.props.image_url && this.props.image_url.includes(".webm") ?
+						<video className="game_logo" autoPlay muted controls={false}>
+							<source src={this.props.image_url} type="video/webm" draggable="false" />
+						</video>
+						:
+						<img className="game_logo" alt={this.props.name} src={this.props.image_url} draggable="false" />
+					}
+
 					<img className="door_top" alt="door_top" src={door_top} draggable="false" />
 					<img className="door_bottom" alt="door_bottom" src={door_bottom} draggable="false" />
 				</div>
