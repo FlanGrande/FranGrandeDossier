@@ -1,10 +1,10 @@
 import React from 'react';
 import Particles from 'react-tsparticles'
-import frame from './frame.png';
-import door_reflection from './door_reflection.png';
-import door_top from './door_top.png';
-import door_bottom from './door_bottom.png';
-import cog from './cog.png';
+import frame from './frame.webp';
+import door_reflection from './door_reflection.webp';
+import door_top from './door_top.webp';
+import door_bottom from './door_bottom.webp';
+import cog from './cog.webp';
 import "./ProjectDoor.css";
 import "./ProjectDoorParticles.css"
 
