@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.708cdbf3.chunk.css",
+    "main.js": "/static/js/main.b9c366b7.chunk.js",
+    "main.js.map": "/static/js/main.b9c366b7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.16f68224.js",
+    "runtime-main.js.map": "/static/js/runtime-main.16f68224.js.map",
+    "static/js/2.fa025657.chunk.js": "/static/js/2.fa025657.chunk.js",
+    "static/js/2.fa025657.chunk.js.map": "/static/js/2.fa025657.chunk.js.map",
+    "static/js/3.99f80568.chunk.js": "/static/js/3.99f80568.chunk.js",
+    "static/js/3.99f80568.chunk.js.map": "/static/js/3.99f80568.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.708cdbf3.chunk.css.map": "/static/css/main.708cdbf3.chunk.css.map",
+    "static/js/2.fa025657.chunk.js.LICENSE.txt": "/static/js/2.fa025657.chunk.js.LICENSE.txt",
+    "static/media/cog.b381801e.webp": "/static/media/cog.b381801e.webp",
+    "static/media/door_bottom.971a93c0.webp": "/static/media/door_bottom.971a93c0.webp",
+    "static/media/door_reflection.300b016d.webp": "/static/media/door_reflection.300b016d.webp",
+    "static/media/door_top.93f5f670.webp": "/static/media/door_top.93f5f670.webp",
+    "static/media/frame.047cded5.webp": "/static/media/frame.047cded5.webp",
+    "static/media/fran.123cc900.jpg": "/static/media/fran.123cc900.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.16f68224.js",
+    "static/js/2.fa025657.chunk.js",
+    "static/css/main.708cdbf3.chunk.css",
+    "static/js/main.b9c366b7.chunk.js"
+  ]
+}
