@@ -1,0 +1,31 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [master]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    
+    - name: Build React App
+      env:
+        CI : false
+      run: |
+        cd frangrandedossier
+        npm install
+        yarn build
+        mv build dist  # Rename the build folder if necessary
+    
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: frangrandedossier/dist
+        clean: true
