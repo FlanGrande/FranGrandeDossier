@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    - export SOURCEPATH=/home/z0qzj7w8/repositories/FranGrandeDossier/frangrandedossier/build
+    - export DEPLOYPATH=/home/z0qzj7w8/public_html/
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R $SOURCEPATH/static $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/index.html $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/asset-manifest.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/favicon.ico $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/logo192.png $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/logo512.png $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/manifest.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/robots.txt $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/service-worker.js $DEPLOYPATH
