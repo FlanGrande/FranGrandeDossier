@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/FlanGrande/FranGrandeDossier/static/css/main.708cdbf3.chunk.css",
-    "main.js": "/FlanGrande/FranGrandeDossier/static/js/main.1e2ccdab.chunk.js",
-    "main.js.map": "/FlanGrande/FranGrandeDossier/static/js/main.1e2ccdab.chunk.js.map",
-    "runtime-main.js": "/FlanGrande/FranGrandeDossier/static/js/runtime-main.48b6dea4.js",
-    "runtime-main.js.map": "/FlanGrande/FranGrandeDossier/static/js/runtime-main.48b6dea4.js.map",
-    "static/js/2.fa025657.chunk.js": "/FlanGrande/FranGrandeDossier/static/js/2.fa025657.chunk.js",
-    "static/js/2.fa025657.chunk.js.map": "/FlanGrande/FranGrandeDossier/static/js/2.fa025657.chunk.js.map",
-    "static/js/3.99f80568.chunk.js": "/FlanGrande/FranGrandeDossier/static/js/3.99f80568.chunk.js",
-    "static/js/3.99f80568.chunk.js.map": "/FlanGrande/FranGrandeDossier/static/js/3.99f80568.chunk.js.map",
-    "index.html": "/FlanGrande/FranGrandeDossier/index.html",
-    "static/css/main.708cdbf3.chunk.css.map": "/FlanGrande/FranGrandeDossier/static/css/main.708cdbf3.chunk.css.map",
-    "static/js/2.fa025657.chunk.js.LICENSE.txt": "/FlanGrande/FranGrandeDossier/static/js/2.fa025657.chunk.js.LICENSE.txt",
-    "static/media/cog.b381801e.webp": "/FlanGrande/FranGrandeDossier/static/media/cog.b381801e.webp",
-    "static/media/door_bottom.971a93c0.webp": "/FlanGrande/FranGrandeDossier/static/media/door_bottom.971a93c0.webp",
-    "static/media/door_reflection.300b016d.webp": "/FlanGrande/FranGrandeDossier/static/media/door_reflection.300b016d.webp",
-    "static/media/door_top.93f5f670.webp": "/FlanGrande/FranGrandeDossier/static/media/door_top.93f5f670.webp",
-    "static/media/frame.047cded5.webp": "/FlanGrande/FranGrandeDossier/static/media/frame.047cded5.webp",
-    "static/media/fran.123cc900.jpg": "/FlanGrande/FranGrandeDossier/static/media/fran.123cc900.jpg"
+    "main.css": "./static/css/main.708cdbf3.chunk.css",
+    "main.js": "./static/js/main.1e2ccdab.chunk.js",
+    "main.js.map": "./static/js/main.1e2ccdab.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.48b6dea4.js",
+    "runtime-main.js.map": "./static/js/runtime-main.48b6dea4.js.map",
+    "static/js/2.fa025657.chunk.js": "./static/js/2.fa025657.chunk.js",
+    "static/js/2.fa025657.chunk.js.map": "./static/js/2.fa025657.chunk.js.map",
+    "static/js/3.99f80568.chunk.js": "./static/js/3.99f80568.chunk.js",
+    "static/js/3.99f80568.chunk.js.map": "./static/js/3.99f80568.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.708cdbf3.chunk.css.map": "./static/css/main.708cdbf3.chunk.css.map",
+    "static/js/2.fa025657.chunk.js.LICENSE.txt": "./static/js/2.fa025657.chunk.js.LICENSE.txt",
+    "static/media/cog.b381801e.webp": "./static/media/cog.b381801e.webp",
+    "static/media/door_bottom.971a93c0.webp": "./static/media/door_bottom.971a93c0.webp",
+    "static/media/door_reflection.300b016d.webp": "./static/media/door_reflection.300b016d.webp",
+    "static/media/door_top.93f5f670.webp": "./static/media/door_top.93f5f670.webp",
+    "static/media/frame.047cded5.webp": "./static/media/frame.047cded5.webp",
+    "static/media/fran.123cc900.jpg": "./static/media/fran.123cc900.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.48b6dea4.js",
-    "static/js/2.fa025657.chunk.js",
-    "static/css/main.708cdbf3.chunk.css",
-    "static/js/main.1e2ccdab.chunk.js"
+    "./static/js/runtime-main.48b6dea4.js",
+    "./static/js/2.fa025657.chunk.js",
+    "./static/css/main.708cdbf3.chunk.css",
+    "./static/js/main.1e2ccdab.chunk.js"
   ]
 }
